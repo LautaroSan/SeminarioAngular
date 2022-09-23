@@ -5,31 +5,17 @@
             <th>Imagen</th>
             <th>Nombre</th>
             <th>Tipo</th>
-            <th>Precio Unitario($)</th>
+            <th>Precio Unitario</th>
             <th>Stock</th>
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr *ngFor="let material of materials" [ngClass]="{'discount': material.discount == true}">
             <td> <img [src]="material.image" [alt]="material.name"></td>
             <td>{{material.name}}</td>
             <td>{{material.type}}</td>
-            <td>{{material.price}}</td>
-            <td>{{material.stock}}</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
+            <td>{{material.price | currency}}</td>
+            <td> <span class="badge text-bg-warning" *ngIf="material.stock==0">Sin Stock</span></td>
         </tr>
     </tbody>
 </table>

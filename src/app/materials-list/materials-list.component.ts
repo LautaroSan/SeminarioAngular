@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Material } from './Materials';
 
 @Component({
   selector: 'app-materials-list',
@@ -7,13 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MaterialsListComponent implements OnInit {
 
-  material = {
+  materials : Material[] = [
+  {
     "name": "Ladrillo 18",
     "type": "mamposteria",
     "price": 120,
     "stock": 2000,
-    "image": "assets/img/l18.jpg"
-  }
+    "image": "assets/img/l18.jpg",
+    "discount": false
+  },
+  {
+    "name": "Ladrillo 12",
+    "type": "mamposteria",
+    "price": 120,
+    "stock": 2000,
+    "image": "assets/img/l12.jpg",
+    "discount": true
+  },
+  {
+    "name": "Ladrillo 8",
+    "type": "mamposteria",
+    "price": 120,
+    "stock": 0,
+    "image": "assets/img/l8.jpg",
+    "discount": false
+  },
+]
 
   constructor() { }
 
