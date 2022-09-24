@@ -7,6 +7,7 @@
             <th>Tipo</th>
             <th>Precio Unitario</th>
             <th>Stock</th>
+            <th>Cantidad</th>
         </tr>
     </thead>
     <tbody>
@@ -16,6 +17,13 @@
             <td>{{material.type}}</td>
             <td>{{material.price | currency}}</td>
             <td> <span class="badge text-bg-warning" *ngIf="material.stock==0">Sin Stock</span></td>
+            <td>
+                <div class="cantidad">
+                    <button class="btn btn-primary btn-sm" (click)="downQuantity(material)" >-</button>
+                    <input type="text" [(ngModel)]="material.quantity" (keyup)="verifyInput($event,material)">
+                    <button class="btn btn-primary btn-sm" (click)="upQuantity(material)">+</button>
+                </div>
+            </td>
         </tr>
     </tbody>
 </table>

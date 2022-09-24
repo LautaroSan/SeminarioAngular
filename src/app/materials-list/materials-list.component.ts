@@ -13,17 +13,19 @@ export class MaterialsListComponent implements OnInit {
     "name": "Ladrillo 18",
     "type": "mamposteria",
     "price": 120,
-    "stock": 2000,
+    "stock": 8,
     "image": "assets/img/l18.jpg",
-    "discount": false
+    "discount": false,
+    "quantity" : 0
   },
   {
     "name": "Ladrillo 12",
     "type": "mamposteria",
     "price": 120,
-    "stock": 2000,
+    "stock": 5,
     "image": "assets/img/l12.jpg",
-    "discount": true
+    "discount": true,
+    "quantity" : 0
   },
   {
     "name": "Ladrillo 8",
@@ -31,13 +33,36 @@ export class MaterialsListComponent implements OnInit {
     "price": 120,
     "stock": 0,
     "image": "assets/img/l8.jpg",
-    "discount": false
+    "discount": false,
+    "quantity" : 0
   },
 ]
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  upQuantity(material : Material) : void{
+    if(material.quantity<material.stock){
+      material.quantity++;
+    }
+  }
+
+  downQuantity(material : Material) : void{
+    if(material.quantity>0){
+      material.quantity--;
+    }
+  }
+
+  verifyInput(event: any, material : Material) : void{
+    let input = event.target;
+    if((input.value >= 0) && (input.value <= material.stock)){
+
+    }else{
+      event.preventDefault();
+      input.value = 0;
+    }
   }
 
 }

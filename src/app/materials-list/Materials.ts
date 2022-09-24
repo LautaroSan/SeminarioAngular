@@ -5,4 +5,5 @@ export interface Material{
     stock: number;
     image: string;
     discount : boolean;
+    quantity: number
 }
