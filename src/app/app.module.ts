@@ -8,6 +8,7 @@ import { CarroComprasComponent } from './carro-compras/carro-compras.component';
 import { FormsModule } from '@angular/forms';
 import { CorralonMaterialsComponent } from './corralon-materials/corralon-materials.component';
 import { CorralonAboutComponent } from './corralon-about/corralon-about.component';
+import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CorralonAboutComponent } from './corralon-about/corralon-about.componen
     MaterialsListComponent,
     CarroComprasComponent,
     CorralonMaterialsComponent,
-    CorralonAboutComponent
+    CorralonAboutComponent,
+    InputIntegerComponent
   ],
   imports: [
     BrowserModule,

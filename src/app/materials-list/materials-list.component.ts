@@ -43,26 +43,6 @@ export class MaterialsListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upQuantity(material : Material) : void{
-    if(material.quantity<material.stock){
-      material.quantity++;
-    }
-  }
-
-  downQuantity(material : Material) : void{
-    if(material.quantity>0){
-      material.quantity--;
-    }
-  }
-
-  verifyInput(event: any, material : Material) : void{
-    let input = event.target;
-    if((input.value >= 0) && (input.value <= material.stock)){
-
-    }else{
-      event.preventDefault();
-      input.value = 0;
-    }
-  }
+  
 
 }
