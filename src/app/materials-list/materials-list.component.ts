@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MaterialDataService } from '../material-data.service';
 import { Material } from './Materials';
 
 @Component({
@@ -21,7 +22,7 @@ export class MaterialsListComponent implements OnInit {
   {
     "name": "Ladrillo 12",
     "type": "mamposteria",
-    "price": 120,
+    "price": 100,
     "stock": 5,
     "image": "assets/img/l12.jpg",
     "discount": true,
@@ -30,7 +31,7 @@ export class MaterialsListComponent implements OnInit {
   {
     "name": "Ladrillo 8",
     "type": "mamposteria",
-    "price": 120,
+    "price": 60,
     "stock": 0,
     "image": "assets/img/l8.jpg",
     "discount": false,
@@ -38,11 +39,20 @@ export class MaterialsListComponent implements OnInit {
   },
 ]
 
-  constructor() { }
+  constructor( private materialCartService : MaterialDataService) { }
 
   ngOnInit(): void {
   }
 
+  addToCart(mat : Material){
+    if(mat.quantity!=0){
+      this.materialCartService.addToCart(mat);
+      mat.stock -= mat.quantity;
+      mat.quantity = 0;
+    }
+    
+
+  }
   
 
 }

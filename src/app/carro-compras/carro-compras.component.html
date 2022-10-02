@@ -6,20 +6,16 @@
         <th>SubTotal($)</th>
     </tr>
     <tbody>
-        <tr>
-            <td>Ladrillo 18</td>
-            <td>5</td>
-            <td>600</td>
+        <tr *ngFor="let mat of cartList">
+            <td>{{mat.name}}</td>
+            <td>{{mat.quantity}}</td>
+            <td>{{mat.quantity*mat.price}}</td>
         </tr>
         <tr>
-            <td>Ladrillo 12</td>
-            <td>4</td>
-            <td>350</td>
-        </tr>
-        <tr class="final">
+        <tr class="final table-primary">
             <td>Total($)</td>
             <td></td>
-            <td></td>
+            <td >{{total()}}</td>
         </tr>
     </tbody>
 </table>
