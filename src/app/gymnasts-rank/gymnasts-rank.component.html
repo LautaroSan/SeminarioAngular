@@ -1,0 +1,20 @@
+<h1>Ranking Gimnastas</h1>
+<table class="table">
+    <tr>
+        <th>Gimnasta</th>
+        <th>Votos</th>
+    </tr>
+    <tbody>
+        <tr *ngFor="let mat of gymnastList">
+            <td>{{mat.name}}</td>
+            <td>{{mat.totalVotes}}</td>
+        <!--<td>{{mat.quantity*mat.price}}</td>-->
+        </tr>
+        
+        <!--<tr class="final table-primary">
+            <td>Total($)</td>
+            <td></td>
+        <td >{{total()}}</td>
+        </tr>-->
+    </tbody>
+</table>

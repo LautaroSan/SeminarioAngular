@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Material } from '../materials-list/Materials';
+import { Gymnast } from '../gymnast-list/Gymnasts';
 
 
 @Component({
@@ -42,10 +42,12 @@ export class InputIntegerComponent implements OnInit {
     let input = event.target;
     if((input.value >= 0) && (input.value <= this.max)){
       this.quantity=input.value;
+      
     }else{
       this.quantity = 0;
       input.value = 0;
     }
+    this.quantityChange.emit(this.quantity);
   }
 
 }

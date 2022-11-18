@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CorralonAboutComponent } from './corralon-about/corralon-about.component';
-import { CorralonMaterialsComponent } from './corralon-materials/corralon-materials.component';
+import { GymRankAboutComponent } from './GymRank-about/GymRank-about.component';
+import { GymRankGymnastsComponent } from './GymRank-gymnasts/GymRank-gymnasts.component';
 
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'materials',
+    redirectTo:'gymnasts',
     pathMatch:'full'
   },
   {
-    path:'materials', 
-    component: CorralonMaterialsComponent
+    path:'gymnasts', 
+    component: GymRankGymnastsComponent
   },
   {
     path:'about',
-    component: CorralonAboutComponent
+    component: GymRankAboutComponent
   },
 ];
 

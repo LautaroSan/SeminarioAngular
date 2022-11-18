@@ -3,20 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaterialsListComponent } from './materials-list/materials-list.component';
-import { CarroComprasComponent } from './carro-compras/carro-compras.component';
+import { GymnastsListComponent } from './gymnast-list/gymnasts-list.component';
+import { gymnastsRankComponent } from './gymnasts-rank/gymnasts-rank.component';
 import { FormsModule } from '@angular/forms';
-import { CorralonMaterialsComponent } from './corralon-materials/corralon-materials.component';
-import { CorralonAboutComponent } from './corralon-about/corralon-about.component';
+import { GymRankGymnastsComponent } from './GymRank-gymnasts/GymRank-gymnasts.component';
+import { GymRankAboutComponent } from './GymRank-about/GymRank-about.component';
 import { InputIntegerComponent } from './input-integer/input-integer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MaterialsListComponent,
-    CarroComprasComponent,
-    CorralonMaterialsComponent,
-    CorralonAboutComponent,
+    GymnastsListComponent,
+    gymnastsRankComponent,
+    GymRankGymnastsComponent,
+    GymRankAboutComponent,
     InputIntegerComponent
   ],
   imports: [
