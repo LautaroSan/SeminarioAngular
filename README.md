@@ -1,6 +1,7 @@
 # Gymnasts Rank
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3. Again with gymnastics. This project is the result of a short-time subject from College, where students where introduced to Angular Framework. So, it features a basic and simple app where you can grant points to different gymnasts and rank them. The goal of the subjet was to learn the basics of angular: core components, routing, typescript, component communication (father-child) and services.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3. 
+Again with gymnastics. This project is the result of a short-time subject from College, where students where introduced to Angular Framework. So, it features a basic and simple app where you can grant points to different gymnasts and rank them. The goal of the subjet was to learn the basics of angular: core components, routing, typescript, component communication (father-child) and services.
 
 ## Development server
 
